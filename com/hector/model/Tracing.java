@@ -25,7 +25,7 @@ public class Tracing {
             System.out.println("Choose role (Input number to choose)");
             System.out.println("");
             System.out.println("1. Admin");
-            System.out.println("2. com.hector.model.Customer");
+            System.out.println("2. com.hector.model.user.Customer");
             System.out.println("3. com.hector.model.Shop");
             System.out.println("4. Exit");
             Scanner option = new Scanner(System.in);
@@ -34,8 +34,8 @@ public class Tracing {
             switch (role) {
                 case 1:
                     System.out.println("Which option do you want to choose? (Input number to choose)");
-                    System.out.println("1.Update com.hector.model.Customer Status(Flagging)");
-                    System.out.println("2.View com.hector.model.Customer history");
+                    System.out.println("1.Update com.hector.model.user.Customer Status(Flagging)");
+                    System.out.println("2.View com.hector.model.user.Customer history");
                     System.out.println("3.View com.hector.model.Shop Details");
                     action1 = option.nextInt();
                     System.out.println("");
@@ -94,7 +94,7 @@ public class Tracing {
                     System.out.println("Hello customer,what can we help you with? (Input number to choose)");
                     System.out.println("1.Register");
                     System.out.println("2.Check in");
-                    System.out.println("3.View history(com.hector.model.Customer");
+                    System.out.println("3.View history(com.hector.model.user.Customer");
                     action2 = option.nextInt();
                     System.out.println("");
                     switch (action2) {

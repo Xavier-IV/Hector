@@ -1,6 +1,6 @@
 package com.hector.service;
 
-import com.hector.model.Customer;
+import com.hector.model.user.Customer;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,7 +31,7 @@ public class CustomerService {
         System.out.println("Save customers to file...");
         saveCustomerToFile(customers);
 
-        // com.hector.model.Customer c = new com.hector.model.Customer();
+        // com.hector.model.user.Customer c = new com.hector.model.user.Customer();
         // com.hector.model.Shop s = new com.hector.model.Shop();
         // Admin add = new Admin();
 

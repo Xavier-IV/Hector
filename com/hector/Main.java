@@ -1,6 +1,6 @@
 package com.hector;
 
-import com.hector.model.Customer;
+import com.hector.model.user.Customer;
 import com.hector.service.AuthService;
 
 public class Main {
@@ -11,7 +11,5 @@ public class Main {
                 Customer.CustomerStatus.CLEAR);
 
         System.out.println(customer);
-
-        Dynamic user = AuthService.login()
     }
 }
