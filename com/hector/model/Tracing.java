@@ -34,9 +34,9 @@ public class Tracing {
             switch (role) {
                 case 1:
                     System.out.println("Which option do you want to choose? (Input number to choose)");
-                    System.out.println("1.Update com.hector.model.user.Customer Status(Flagging)");
-                    System.out.println("2.View com.hector.model.user.Customer history");
-                    System.out.println("3.View com.hector.model.Shop Details");
+                    System.out.println("1.Update Customer Status(Flagging)");
+                    System.out.println("2.View Customer history");
+                    System.out.println("3.View Shop Details");
                     action1 = option.nextInt();
                     System.out.println("");
                     switch (action1) {
