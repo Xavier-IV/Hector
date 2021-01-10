@@ -143,6 +143,7 @@ public class CustomerService {
             System.out.print("You've not logged in yet.");
             this.login();
         }
+
         System.out.println("\n\nVisit History");
         System.out.println("Datetime" + "\t" + "Shop Name");
         for (VisitHistory history : this.visitList.values()) {
@@ -156,6 +157,10 @@ public class CustomerService {
     }
 
     public void viewStatus() {
+        if (Objects.isNull(this.loggedInUser)) {
+            System.out.print("You've not logged in yet.");
+            this.login();
+        }
         System.out.println(this.loggedInUser.getStatus());
     }
 }
