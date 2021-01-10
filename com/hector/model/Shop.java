@@ -1,12 +1,25 @@
 package com.hector.model;
 
 public class Shop {
+	private String registrationCode;
 	private String name;
 	private String phoneNum;
-	private String status;
+	private ShopStatus status;
 	private String manager;
 
-	public Shop(String name, String phoneNum, String status, String manager){
+	public enum ShopStatus {
+		CLEAR,
+		CASE,
+		CONTACT
+	}
+
+	public Shop(
+			String registrationCode,
+			String name,
+			String phoneNum,
+			ShopStatus status,
+			String manager){
+		this.registrationCode = registrationCode;
 		this.name = name;
 		this.phoneNum = phoneNum;
 		this.status = status;
@@ -21,7 +34,7 @@ public class Shop {
 		return phoneNum;
 	}
 	
-	public String getShopstatus(){
+	public ShopStatus getShopstatus(){
 		return status;
 	}
 	
@@ -37,7 +50,7 @@ public class Shop {
 		this.phoneNum = phoneNum;
 	}
 	
-	public void setShopstatus(String status){
+	public void setShopstatus(ShopStatus status){
 		this.status = status;
 	}
 	

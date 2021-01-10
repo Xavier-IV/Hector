@@ -33,5 +33,7 @@ public class Printer {
         System.out.println("1.Register");
         System.out.println("2.Check in");
         System.out.println("3.View history");
+        System.out.println("4.View status");
+        System.out.println("0.Main Menu");
     }
 }
