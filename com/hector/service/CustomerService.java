@@ -83,7 +83,7 @@ public class CustomerService {
     public Boolean login() {
         String username, password;
 
-        if(!Objects.isNull(this.loggedInUser)) {
+        if (!Objects.isNull(this.loggedInUser)) {
             return true;
         }
 
@@ -139,9 +139,19 @@ public class CustomerService {
     }
 
     public void viewHistory() {
+        if (Objects.isNull(this.loggedInUser)) {
+            System.out.print("You've not logged in yet.");
+            this.login();
+        }
+        System.out.println("\n\nVisit History");
         System.out.println("Datetime" + "\t" + "Shop Name");
         for (VisitHistory history : this.visitList.values()) {
-            System.out.println(history.getLocalDateTime() + "\t" + history.getShop().getShopname());
+            if (history.getCustomer().getName().equals(this.loggedInUser.getName())) {
+                System.out.println(
+                        history.getCustomer().getName() + "\t" +
+                                history.getLocalDateTime() + "\t" +
+                                history.getShop().getShopname());
+            }
         }
     }
 

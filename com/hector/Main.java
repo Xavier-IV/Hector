@@ -1,5 +1,6 @@
 package com.hector;
 
+import com.hector.database.DataFactory;
 import com.hector.helper.Printer;
 import com.hector.model.Shop;
 import com.hector.model.VisitHistory;
@@ -19,7 +20,7 @@ public class Main {
         /* Services */
         VisitHistoryService visitHistoryService = new VisitHistoryService();
 
-        Main.init(customerList, shopList);
+        DataFactory.init(customerList, shopList, visitList, visitHistoryService);
 
         int role;
         Printer.MainMenu();
@@ -45,39 +46,5 @@ public class Main {
 
     }
 
-    public static void init(
-            HashMap<String, Customer> customerList,
-            HashMap<String, Shop> shopList) {
-        /* Setup Customer */
-        Customer customer1 = new Customer("Salman Halim",
-                "01241231",
-                Customer.CustomerStatus.CLEAR);
-        customer1.setPassword("password123");
 
-        Customer customer2 = new Customer("Abi Razi",
-                "041313231",
-                Customer.CustomerStatus.CLEAR);
-        customer2.setPassword("password123");
-
-        customerList.put("salman@gmail.com", customer1);
-        customerList.put("abi@gmail.com", customer2);
-
-        /* Setup shops */
-        Shop shop1 = new Shop(
-                "XA-00001",
-                "Aqil Groceries",
-                "01241231",
-                Shop.ShopStatus.CLEAR,
-                "Aqil");
-
-        Shop shop2 = new Shop(
-                "XA-00002",
-                "Mobile Repair Sdn Bhd",
-                "910413212",
-                Shop.ShopStatus.CLEAR,
-                "Sammy");
-
-        shopList.put("XA-00001", shop1);
-        shopList.put("XA-00002", shop2);
-    }
 }
